@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>My portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
         <div class="nav-wrapper">
             <div class="left-side">
-                <div class="nav-link-wrapper">
-                    <a href="index.html">Home</a> 
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
                 </div>
                 <div class="nav-link-wrapper">
                     <a href="about.html">About Me</a>
                 </div>
-            </div> 
+                <div class="nav-link-wrapper">
+                    <a href="about.html">Social Networks</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="about.html">Photos of what I love</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="about.html">Contact</a>
+                </div>
+            </div>
             <div class="right-side">
                 <div class="brand">
                     <div>CARLO LUJAN</div>
@@ -24,87 +35,98 @@
             </div>
         </div>
         <div class="content-wrapper">
-            <div class= "portfolio-items-wrapper">
-                <div class= "portfolio-item-wrapper">  
-                    <div class="portfolio-img-background" onClick()="/index" style="background-image:url(images/aboutme.jpg)"></div>
-                    
+            <div class="portfolio-items-wrapper">
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/projects.jpg)"></div>
                     <div class="img-text-wrapper">
                         <div class="logo-wrapper">
-                            <img src="images/none.jpg">
+                            <img src="images/projects.png" alt="">
                         </div>
-                        <div class="subtitle">
-                            Learn about me
+                        <div class="subtitle">Learn about my projects
                         </div>
                     </div>
                 </div>
 
-                <div class= "portfolio-item-wrapper">  
+                <div class="portfolio-item-wrapper">
                     <div class="portfolio-img-background" style="background-image:url(images/aboutme.jpg)"></div>
-                    
                     <div class="img-text-wrapper">
                         <div class="logo-wrapper">
-                            <img src="images/none.jpg">
+                            <img src="images/perfil.png" alt="">
                         </div>
-                        <div class="subtitle">
-                            Hellou da
+                        <div class="subtitle">Learn about me
                         </div>
                     </div>
                 </div>
 
-                <div class= "portfolio-item-wrapper">  
-                    <div class="portfolio-img-background" style="background-image:url(images/aboutme.jpg)"></div>
-                    
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/coding1.jpg)"></div>
                     <div class="img-text-wrapper">
                         <div class="logo-wrapper">
-                            <img src="images/none.jpg">
+                            <img src="images/socialmedia.png" alt="">
                         </div>
-                        <div class="subtitle">
-                            My name is jeff
+                        <div class="subtitle">Instagram: @carlo_lj Github:CarloLj Facebook:Carlo Angel Lj
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/whatilove.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/heart.png" alt="">
+                        </div>
+                        <div class="subtitle">Photos of what I love
                         </div>
                     </div>
                 </div>
 
-                                <div class= "portfolio-item-wrapper">  
-                    <div class="portfolio-img-background" style="background-image:url(images/aboutme.jpg)"></div>
-                    
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/contact.jpg)"></div>
                     <div class="img-text-wrapper">
                         <div class="logo-wrapper">
-                            <img src="images/none.jpg">
+                            <img src="images/perfil.png" alt="">
                         </div>
-                        <div class="subtitle">
-                            Carlo Lujan Garcia
+                        <div href="aboutme.html" class="subtitle"> Contact
                         </div>
                     </div>
                 </div>
 
-                <div class= "portfolio-item-wrapper">  
-                    <div class="portfolio-img-background" style="background-image:url(images/aboutme.jpg)"></div>
-                    
+                <div class="portfolio-item-wrapper">
+                    <div href="https://github.com/CarloLj" class="portfolio-img-background" style="background-image:url(images/github.png)"></div>
                     <div class="img-text-wrapper">
                         <div class="logo-wrapper">
-                            <img src="images/none.jpg">
+                            <img src="images/github1.png" alt="">
                         </div>
-                        <div class="subtitle">
-                            I love minecraft
+                        <div class="subtitle">Github
                         </div>
                     </div>
                 </div>
-
-                <div class= "portfolio-item-wrapper">  
-                    <div class="portfolio-img-background" style="background-image:url(images/aboutme.jpg)"></div>
-                    
-                    <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="images/none.jpg">
-                        </div>
-                        <div class="subtitle">
-                            My name is not jeff
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
-  </body>
+    <section id="footer">
+        <div class="four-column-div">
+            <div class="row">
+                <a href="index.html">Home</a>
+            </div>
+            <div class="row">
+                <a href="about.html">About Me</a>
+            </div>
+            <div class="row">
+                <a href="https://www.github.com/CarloLj">GitHub</a>
+            </div>
+            <div class="row">
+                <a href="index.html">Contact</a>
+            </div>
+        </div>
+        <div class="one-column-centered">
+            <a href="https://www.linkedin.com/in/carlo-angel-lujan-garcia/">Carlo Angel Lujan Garcia</a>
+        </div>
+        <hr>
+        <div class="one-column-centered">
+            <a>© Google SPS Week 1 -- Carlo Lujan -- 2021</a>
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+
 </html>
