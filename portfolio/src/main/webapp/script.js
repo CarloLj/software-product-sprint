@@ -37,3 +37,20 @@ const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
         });
     });
 
+$(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    $('.img-container').css({
+        filter: "blur(" + (scroll/35) + "px)"
+    })
+})
+
+$(window).resize(function() {
+  var scroll = $(window).width();
+  if (scroll < 600) {
+     $('.nav-wrapper > .left-side > div').css("font-size", 0.6+"em")
+  }
+ else {
+    $('.nav-wrapper > .left-side > div').css("font-size", 0.9+"em")
+ }
+});
+
