@@ -60,19 +60,18 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 450px;
+    height: 800px;
     width: 100%;
 }
 
 .herotext{
-    position: absolute;
-    width: 100%;
-    height: auto;
-    top: 0;
+    position: flex;
 }
 
 .herotext h1{
-    color:white;
+    color:black;
+    text-align: center;
+    justify-content: center;
 }
 
 /*WORST CASE IF SOMETHING IN THE PORTFOLIO OVERFLOWS ON A VERY SMALL SCREEN*/
@@ -177,6 +176,11 @@ div.portfolio-items-wrapper{
     filter:brightness(10%);
 }
 
+.subtitle-darken{
+    font-weight: 700;
+    color: lightseagreen;
+}
+
 /*About Page */
 .two-column-wrapper{
     display:grid;
@@ -273,7 +277,7 @@ section {
 .stickymedia{
 	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
 	left: 0; /* Establecemos la barra en la izquierda */
-	top: 50%; /* Bajamos la barra 200px de arriba a abajo */
+	top: 30%; /* Bajamos la barra 200px de arriba a abajo */
 	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
 }
 
@@ -283,7 +287,7 @@ section {
 }
 
 .fa-instagram {
-  width: 100%;
+  width: 30%;
   height: auto;
   background: rgb(163, 44, 44);
   color: white;
@@ -291,11 +295,11 @@ section {
 }
 
 .fa:hover{
-    width: 200%;
+    width: 100%;
 }
 
 .fa-linkedin {
-  width: 100%;
+  width: 30%;
   height: auto;
   background: rgb(16, 117, 194);
   color: white;
@@ -303,7 +307,7 @@ section {
 }
 
 .fa-github {
-  width: 100%;
+  width: 30%;
   height: auto;
   background: rgb(73, 73, 73);
   color: white;
@@ -347,7 +351,87 @@ input[type=submit]:hover {
 
 
 /*PROJECTS*/
+.two-column-wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .imagenproject{
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: auto;
+}
+
+.projecttext{
+    text-align: center;
+}
+
+
+/*____________________________*/
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  list-style: none;
+  border-bottom: 0;
+}
+
+.text li {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 2em;
+  color: #fff;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  max-width: 2em;
+}
+.text.hidden li.spaced {
+  padding-left: 0;
+}
+.text li.spaced {
+  padding-left: 0.5em;
+}
+
+.text.hidden li.ghost {
+  opacity: 0;
+  max-width: 0;
+}
+
+
+/*THIS IS FOR PROJECT*/
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #4CAF50;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: white;
+  color: #4CAF50;
+}
+
+.button2 {
+  background-color: #008CBA;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color:white;
+  color: #008CBA;
 }
