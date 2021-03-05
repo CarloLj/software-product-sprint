@@ -1,9 +1,452 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+/*Master styles*/
+body{
+    font-family: "Lato", sans-serif;
+    margin: 0px;
+}
+
+.container{
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
+/*Nav styles*/
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between; 
+    padding: 38px;
+}
+
+.left-side{
+    display: flex;
+}
+
+.nav-wrapper > .left-side > div{
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper{
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a{
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover{
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover{
+    color: black;
+}
+
+/*-----------------*/
+.topimagecontainer{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.image-wrapper{
+    position: relative;
+}
+
+.img-container{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 100%;
+}
+
+.herotext{
+    position: flex;
+}
+
+.herotext h1{
+    color:black;
+    text-align: center;
+    justify-content: center;
+}
+
+/*WORST CASE IF SOMETHING IN THE PORTFOLIO OVERFLOWS ON A VERY SMALL SCREEN*/
+div.portfolio-items-wrapper{
+  overflow-x: auto;
+}
+
+.inner-container{
+    text-align: center;
+    position:absolute;
+    width:100%;
+    color:white;
+    height: auto;
+    margin-top: 200px;
+}
+
+.inner-container a{
+    margin-top: 20px;
+    font-size: 1.3em;
+}
+
+.inner-container h{
+    font-size: 7em;
+}
+
+.inner-container h2{
+    margin-top: -17px;
+    font-size: 1.7em;
+    text-align: center;
+    font-weight: 400;
+}
+
+.btn{
+    display: inline-block;
+    width: 200px;
+    font-weight: bold;
+    padding: 10px;
+    color: #fff;
+    border: 4px solid #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out, color 0.2s ease out;
+}
+
+.btn:hover, bt.active{
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s ease-in, color 0.3 ease-in;
+}
+
+/*Portfolio styles*/
+.portfolio-items-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+    position: relative;
+}
+
+.portfolio-img-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 100%;
+}
+
+.img-text-wrapper{
+    position: absolute;
+    top: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    /*padding-left: 100px;
+    padding-right: 100px;*/
+}
+
+.logo-wrapper img{
+    width:40%;
+    margin-bottom: 20px;
+}
+
+/*Si no añadimos el font weight entonces empeiza con otro tamaño y se ve feo*/
+.img-text-wrapper .subtitle{
+    transition:1s;
+    font-weight: 600;
+    color:transparent;
+}
+.img-text-wrapper:hover .subtitle{
+    font-weight: 600;
+    color: lightseagreen;
+}
+
+.img-darken{
+    transition: 1s;
+    filter:brightness(10%);
+}
+
+.subtitle-darken{
+    font-weight: 700;
+    color: lightseagreen;
+}
+
+/*About Page */
+.two-column-wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img{
+    width: 100%;
+}
+
+.profile-content-wrapper{
+    padding: 30px;
+}
+
+.profile-content-wrapper h1{
+    color:lightseagreen;
+}
+
+.active-nav-link{
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a{
+    color:black !important;
 }
 
 #greeting-container {
   margin-top: 20px;
+}
+
+/*FOOTER*/
+section {
+    padding: 15px 0;
+}
+
+.four-column-div{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    text-transform: uppercase;
+    color: #8a8a8a;
+}
+
+.row a{
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+    transition: border-bottom 0.5s;
+    border-bottom: 1px solid transparent;
+}
+
+.row a:hover{
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+.one-column-centered{
+    padding: 5px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.one-column-centered a{
+    color: #8a8a8a;
+    flex-direction: column;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#footer {
+    background-color: white;
+}
+
+
+/*Social media*/
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+.stickymedia{
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 30%; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+.bigsocialmediacentered{
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
+.fa-instagram {
+  width: 30%;
+  height: auto;
+  background: rgb(163, 44, 44);
+  color: white;
+  transition: ease 0.5s;
+}
+
+.fa:hover{
+    width: 100%;
+}
+
+.fa-linkedin {
+  width: 30%;
+  height: auto;
+  background: rgb(16, 117, 194);
+  color: white;
+  transition: ease 0.5s;
+}
+
+.fa-github {
+  width: 30%;
+  height: auto;
+  background: rgb(73, 73, 73);
+  color: white;
+  transition: ease 0.5s;
+}
+
+
+/*CONTACT PAGE*/
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.containercontact {
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+/*PROJECTS*/
+.three-column-wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.column-item-wrapper {
+    position: relative;
+}
+
+.imagenproject{
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 5px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 350px; /* Set a small width */
+}
+
+.separacion hr{
+    border-top: 25px solid #8a8a8a; 
+}
+
+.imagenproject:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.projecttext{
+    text-align: center;
+}
+
+
+/*____________________________*/
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  list-style: none;
+  border-bottom: 0;
+}
+
+.text li {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 2em;
+  color: #fff;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  max-width: 2em;
+}
+.text.hidden li.spaced {
+  padding-left: 0;
+}
+.text li.spaced {
+  padding-left: 0.5em;
+}
+
+.text.hidden li.ghost {
+  opacity: 0;
+  max-width: 0;
+}
+
+
+/*THIS IS FOR PROJECT*/
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #4CAF50;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: white;
+  color: #4CAF50;
+}
+
+.button2 {
+  background-color: #008CBA;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color:white;
+  color: #008CBA;
 }

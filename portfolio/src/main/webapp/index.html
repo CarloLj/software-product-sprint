@@ -1,19 +1,182 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Carlo's portfolio - Home Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+</head>
+
+<body>
+    <div class="stickymedia">
+            <div class="bigsocialmediacentered">
+                <a href="https://www.github.com/CarloLj" target="_blank" class="fa fa-github"></a>
+                <a href="https://www.linkedin.com/in/carlo-angel-lujan-garcia/" target="_blank" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/carlo_lj" target="_blank" class="fa fa-instagram"></a>
+            </div>
     </div>
-  </body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="projects.html">Projects</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About Me</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="whatilove.html">Photos of what I love</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="brand">
+                    <div>CARLO LUJAN</div>
+                </div>
+            </div>
+        </div>
+        <div class="topimagecontainer">
+            <div class="image-wrapper" >
+                <img class="img-container" style="background-image:url(images/main.jpg)"/>
+            </div> 
+        </div>
+        <div> 
+            <ul class="text hidden">
+                <li>C</li>
+                <li class="ghost">A</li>
+                <li class="ghost">R</li>
+                <li class="ghost">L</li>
+                <li class="ghost">O</li>
+                <li class="spaced">A</li>
+                <li class="ghost">N</li>
+                <li class="ghost">G</li>
+                <li class="ghost">E</li>
+                <li class="ghost">L</li>
+                <li class="spaced">P</li>
+                <li class="ghost">o</li>
+                <li class="ghost">r</li>
+                <li class="ghost">t</li>
+                <li class="ghost">f</li>
+                <li class="ghost">o</li>
+                <li class="ghost">l</li>
+                <li class="ghost">i</li>
+                <li class="ghost">o</li>
+            </ul>
+        </div>
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/projects.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="projects.html">
+                                <img src="images/projects.png" alt="">
+                            </a>
+                        </div>
+                        <div class="subtitle">Learn about my projects
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/aboutme.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="about.html">
+                                <img src="images/perfil.png" alt="">
+                            </a>
+                        </div>
+                        <div class="subtitle">Learn about me
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/coding1.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="https://www.linkedin.com/in/carlo-angel-lujan-garcia/" target="_blank" >
+                                <img src="images/socialmedia.png" alt="">
+                            </a>
+                        </div>
+                        <div class="subtitle">Instagram: @carlo_lj <br>Github:CarloLj <br>Facebook:Carlo Angel Lj</div>
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/whatilove.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="whatilove.html">
+                                <img src="images/heart.png" alt="">
+                            </a>
+                        </div>
+                        <div class="subtitle">Photos of what I love
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/contact.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="contact.html">
+                                <img src="images/contact.png" alt="">
+                            </a>
+                        </div>
+                        <div class="subtitle"> Contact</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div href="https://github.com/CarloLj" target="_blank" class="portfolio-img-background" style="background-image:url(images/github.png)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="https://www.github.com/CarloLj" target="_blank">
+                                <img src="images/github1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="subtitle">Github
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="footer">
+        <div class="four-column-div">
+            <div class="row">
+                <a href="index.html">Home</a>
+            </div>
+            <div class="row">
+                <a href="about.html">About Me</a>
+            </div>
+            <div class="row">
+                <a href="https://www.github.com/CarloLj" target="_blank">GitHub</a>
+            </div>
+            <div class="row">
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="one-column-centered">
+            <a href="https://www.linkedin.com/in/carlo-angel-lujan-garcia/" target="_blank">Carlo Angel Lujan Garcia</a>
+        </div>
+        <hr>
+        <div class="one-column-centered">
+            <a>© Google SPS Week 1 -- Carlo Lujan -- 2021</a>
+        </div>
+    </section>
+</body>
+<script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous">
+</script>
+<script src="script.js"></script>
 </html>
