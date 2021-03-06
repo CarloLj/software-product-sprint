@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
   </head>
-    <body>
+    <body onload="addQuotesOnLoad()">
         <div class="stickymedia">
             <div class="bigsocialmediacentered">
                 <a href="https://www.github.com/CarloLj" target="_blank" class="fa fa-github"></a>
@@ -75,6 +75,47 @@
                 </div>
             </div>
         </div>
+        <div class="slideshow-container">
+            <!-- Full-width slides/quotes -->
+            <div class="mySlides">
+                <q id="text0"></q>
+                <p id="author0" class="author"></p>
+            </div>
+        
+            <div class="mySlides">
+                <q id="text1"></q>
+                <p id="author1" class="author"></p>
+            </div>
+        
+            <div class="mySlides">
+                <q id="text2"></q>
+                <p id="author2" class="author"></p>
+            </div>
+        
+            <div class="mySlides">
+                <q id="text3"></q>
+                <p id="author3" class="author"></p>
+            </div>
+        
+            <div class="mySlides">
+                <q id="text4"></q>
+                <p id="author4" class="author"></p>
+            </div>
+        
+            <!-- Next/prev buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        
+        <!-- Dots/bullets/indicators -->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        <hr>
         <section id="footer">
             <div class="four-column-div">
                 <div class="row">
@@ -109,4 +150,5 @@
       <button onclick="addRandomGreeting()">Hello</button>
       <div id="greeting-container"></div> -->
   <script src="script.js"></script>
+  <script src="commoncomponents.js"></script>
 </html>
