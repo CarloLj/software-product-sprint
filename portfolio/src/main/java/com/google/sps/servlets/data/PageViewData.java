@@ -2,7 +2,7 @@ package com.google.sps.servlets.data;
 
 import java.util.Date;
 
-public final class InitialValues{
+public final class PageViewData{
     private final Date lastUpdate = new Date();
     private int pageViews = 0;
 

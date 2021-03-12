@@ -59,3 +59,74 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+function requestTranslation1(){
+    const texts = document.querySelectorAll('[id=translate-element]')
+    const languageCode = document.getElementById('language').value;
+    const originaltexts = [];
+
+    texts.forEach(element=>{
+        originaltexts.push(element.innerText);
+        element.innerText="Translating...";
+    })
+    
+    /*
+    const requestPromiseArray = originaltexts.map(element => {
+        const params = new URLSearchParams();
+        params.append('text', element);
+        params.append('languageCode', languageCode);
+        return fetch('/translate', {
+            method: 'POST',
+            body: params
+        })
+    })
+
+    const response = Promise.all(requestPromiseArray);
+
+    originaltexts.forEach((element, i) => {
+        console.log(response[i].text);
+        element.text = response[i].text;
+    })
+    */
+    var i = 0;
+    originaltexts.forEach(element=>{
+        const params = new URLSearchParams();
+        params.append('text', element);
+        params.append('languageCode', languageCode);
+        texts[i].innerText = getTranslatedMessage(params)
+        i++;
+    })
+}
+
+async function getTranslatedMessage(paramss){
+    var mensaje = "";
+    const responsee = await fetch('/translate', {
+            method: 'POST',
+            body: paramss
+        }).then(response => response.text())
+            .then((translatedMessage) => {
+                mensaje = translatedMessage;
+            });
+    console.log(mensaje)
+    return mensaje;
+}
+
+/*TRANSLATE*/
+function requestTranslation(){
+    const text = document.getElementById('text').value;
+    const languageCode = document.getElementById('language').value;
+
+    const resultContainer = document.getElementById('result');
+    resultContainer.innerText = 'Loading...';
+
+    const params = new URLSearchParams();
+    params.append('text', text);
+    params.append('languageCode', languageCode);
+
+    fetch('/translate', {
+        method: 'POST',
+        body: params
+    }).then(response => response.text())
+        .then((translatedMessage) => {
+            resultContainer.innerText = translatedMessage;
+        });
+}
