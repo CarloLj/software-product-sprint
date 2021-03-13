@@ -1,6 +1,9 @@
 package com.google.sps;
 
 import java.net.URL;
+
+import com.google.sps.servlets.data.PageViewData;
+
 import org.eclipse.jetty.annotations.AnnotationConfiguration;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.DefaultServlet;
@@ -13,7 +16,7 @@ import org.eclipse.jetty.webapp.WebInfConfiguration;
  * classes annotated with the @WebServlet annotation.
  */
 public class ServerMain {
-
+  public static PageViewData first = new PageViewData();
   public static void main(String[] args) throws Exception {
 
     // Create a server that listens on port 8080.

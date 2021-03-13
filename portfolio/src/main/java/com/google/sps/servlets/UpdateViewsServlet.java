@@ -6,13 +6,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/** Handles requests sent to the /hello URL. Try running a server and navigating to /hello! */
-@WebServlet("/hello")
-public class HelloWorldServlet extends HttpServlet {
+import com.google.sps.ServerMain;
 
+/** Servlet that returns HTML that contains the page view count. */
+@WebServlet("/add-view")
+public class UpdateViewsServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    response.setContentType("text/html;");
-    response.getWriter().println("<h1>Hello world!</h1>");
+    ServerMain.first.addPageView();
   }
 }

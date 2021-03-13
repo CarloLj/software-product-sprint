@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="addQuotesOnLoad()">
     <div class="stickymedia">
             <div class="bigsocialmediacentered">
                 <a href="https://www.github.com/CarloLj" target="_blank" class="fa fa-github"></a>
@@ -21,19 +21,19 @@
         <div class="nav-wrapper">
             <div class="left-side">
                 <div class="nav-link-wrapper">
-                    <a href="index.html">Home</a>
+                    <a id = translate-element href="index.html">Home</a>
                 </div>
                 <div class="nav-link-wrapper active-nav-link">
-                    <a href="projects.html">Projects</a>
+                    <a id = translate-element href="projects.html">Projects</a>
                 </div>
                 <div class="nav-link-wrapper">
-                    <a href="about.html">About Me</a>
+                    <a id = translate-element href="about.html">About Me</a>
                 </div>
                 <div class="nav-link-wrapper">
-                    <a href="whatilove.html">Photos of what I love</a>
+                    <a id = translate-element href="whatilove.html">Photos of what I love</a>
                 </div>
                 <div class="nav-link-wrapper">
-                    <a href="contact.html">Contact</a>
+                    <a  id = translate-element href="contact.html">Contact</a>
                 </div>
             </div>
             <div class="right-side">
@@ -57,7 +57,7 @@
                         </a>
                         <h1>Thorment</h1>
                         <div style="margin-right: 90px; margin-left: 90px;">
-                            <h3 style="font-weight: normal; text-align: justify;">Thorment is a video game developed in Unity by 4 programmers and a sprite, 
+                            <h3 id = translate-element style="font-weight: normal; text-align: justify;">Thorment is a video game developed in Unity by 4 programmers and a sprite, 
                                 audio and sound designer. Thorment is an exploration video game where the 
                                 player will be able to explore different islands, create a home to shelter 
                                 from the great storm that comes every so often, do missions, mine, build and 
@@ -73,8 +73,8 @@
                             </h3>
                         </div>
                         <br><br>
-                            <a class="button button1" href="https://www.youtube.com/watch?v=nxHyywYHl3Q&feature=emb_logo" target="_blank"><h3>View Video</h3></a><br><br>
-                            <a class="button button2" href="https://conqueror-games.itch.io/thorment-the-videogame" target="_blank"><h3>Visit Itch.io</h3></a><br><br>    
+                            <a class="button button1" href="https://www.youtube.com/watch?v=nxHyywYHl3Q&feature=emb_logo" target="_blank"><h3 id = translate-element>View Video</h3></a><br><br>
+                            <a class="button button2" href="https://conqueror-games.itch.io/thorment-the-videogame" target="_blank"><h3 id = translate-element>Visit Itch.io</h3></a><br><br>    
                     </div> 
                 </div>
                 <div class="separacion">
@@ -88,31 +88,33 @@
                         <a target="_blank" href="images/glucometer.jpg" >
                         <img class="imagenproject" src="images/glucometer.jpg"/>
                         </a>
-                        <h1>OSID(Open Source Insulin Dispenser)</h1>
+                        <h1 id = translate-element>OSID(Open Source Insulin Dispenser)</h1>
                         <div style="margin-right: 90px; margin-left: 90px;">
-                            <h3 style="font-weight: normal; text-align: justify;">
+                            <h3 id = translate-element style="font-weight: normal; text-align: justify;">
                                 OSID is a project that was born to help people diagnosed with type 1 diabetes using a portable, mobile
                                 and intelligent system that could help them track their glucose levels and inject a certain amount of insulin
-                                automatically.<br><br>
+                                automatically. This project was made in a team of 3 people.<br><br>
                                 This project has three parts:<br><br>
-                                <strong>1-Mobile App made in Android studio:</strong><br>
+                                1-Mobile App made in Android studio:<br>
                                 This mobile application is capable of establishing a bluetooth connection with
                                 the glucometer and receives the voltage values of the blood, then we use a mathematical
                                 equation to convert that numeric value to glucose levels to send it, so the insulin pump can inject it. The mobile application also has notificacions,
                                 graphs and an intuitive design.<br><br>
-                                <strong>2-Glucometer:</strong><br>
-                                This mobile application is capable of establishing a Bluetooth connection with the glucometer and receives the voltage values of the blood, then 
-                                we use a mathematical equation to convert that numeric value to glucose levels to send it, so the insulin pump can inject 
-                                it. The mobile application also has notifications, graphs and an intuitive design.<br><br>
-                                <strong>3-Insulin-Pump:</strong><br>
+                                2-Glucometer:<br>
+                                Our glucometer is a device capable of reading blood glucose levels and sending them to a mobile application that interprets the data, using electronic 
+                                components, Arduino, "OneTouch glucose strips", and a prototype PCB universal board. We finished a functional schematic of a 
+                                glucometer based on an open-source glucometer and our needs. The information is shown on the mobile application and is stored 
+                                using SQLLite, making it accessible whenever the user needs it. The margin error of the glucose levels calculated by our physical 
+                                prototype glucometer compared to the commercial "OneTouch Ultra 2 Glucometer" is +-10%<br><br>
+                                3-Insulin-Pump:<br>
                                 This pump consisted of a step motor, a radiofrequency receiver, an Arduino nano, and a 5v battery. This Insulin
                                 Pump has an algorithm to inject an extremely small amount of insulin.
                                 <br><br>
                             </h3>  
                         </div>
-                        <a class="button button1" href="https://github.com/CarloLj/OSID_Project_Final" target="_blank"><h3>Visit Repository</h3></a><br><br>
-                        <a class="button button2" href="downloadables/osidspanishcard.pdf" download="Osid_spanish_presentation_card.pdf"><h3>Download OSID spanish presentation card</h3></a><br><br>
-                        <a class="button button2" href="downloadables/glucometer_v2.pdf" download="glucometer_pcb_v2.pdf"><h3>Download OSID Glucometer PCB design</h3></a><br><br>
+                        <a class="button button1" href="https://github.com/CarloLj/OSID_Project_Final" target="_blank"><h3 id = translate-element>Visit Repository</h3></a><br><br>
+                        <a class="button button2" href="downloadables/osidspanishcard.pdf" download="Osid_spanish_presentation_card.pdf"><h3 id = translate-element>Download OSID spanish presentation card</h3></a><br><br>
+                        <a class="button button2" href="downloadables/glucometer_v2.pdf" download="glucometer_pcb_v2.pdf"><h3 id = translate-element>Download OSID Glucometer PCB design</h3></a><br><br>
                     </div> 
                 </div>
                 <div class="separacion">
@@ -126,12 +128,12 @@
                             </a>
                             <br>
                             <div style="margin-right: 90px; margin-left: 90px;">
-                                <h3 style="font-weight: normal; text-align: justify;">A mobile application for ordering drinks, where users can register and "place orders" of
+                                <h3 id = translate-element style="font-weight: normal; text-align: justify;">A mobile application for ordering drinks, where users can register and "place orders" of
                                 the products in our database. The project was made in a team of two and developed in Android Studio. The app used our programmed web services via internet hosting to
                                 communicate with the app. ( Java, MySQL, PHP ).<br><br>
                                 I was the lead web services programmer, DB designer, and an Android Studio programmer.</h3>
                             </div>
-                            <a class="button button1" href="https://github.com/CarloLj/DELIBEER" target="_blank"><h3>Visit Repository</h3></a><br><br>
+                            <a class="button button1" href="https://github.com/CarloLj/DELIBEER" target="_blank"><h3 id = translate-element>Visit Repository</h3></a><br><br>
                     </div> 
                 </div>
                 <div class="separacion">
@@ -147,12 +149,12 @@
                         </a>
                         <h1>AVO (Hackathon Small Project)</h1>
                         <div style="margin-right: 90px; margin-left: 90px;">
-                            <h3 style="font-weight: normal; text-align: justify;">A Hackathon project born to help avocado farmers to understand better their terrains, 
+                            <h3 id = translate-element style="font-weight: normal; text-align: justify;">A Hackathon project born to help avocado farmers to understand better their terrains, 
                             AVO is a platform that allows farmers to find the best place to plant trees.<br><br>
                             All the page was made by me during the Hackathon</h3>
                         </div>
-                        <a class="button button1" href="https://github.com/CarloLj/AGRI" target="_blank"><h3>Visit Repository</h3></a><br><br>
-                        <a class="button button2" href="https://www.netiabot.com.mx" target="_blank"><h3>Visit Webpage</h3></a><br><br>
+                        <a class="button button1" href="https://github.com/CarloLj/AGRI" target="_blank"><h3 id = translate-element>Visit Repository</h3></a><br><br>
+                        <a class="button button2" href="https://www.netiabot.com.mx" target="_blank"><h3 id = translate-element>Visit Webpage</h3></a><br><br>
                     </div> 
                 </div>
                 <div class="separacion">
@@ -161,19 +163,60 @@
             </div>
         </div>
     </div>
+        <div class="slideshow-container">
+        <!-- Full-width slides/quotes -->
+        <div class="mySlides">
+            <div id = translate-element><q id="text0"></q></div>
+            <p id="author0" class="author"></p>
+        </div>
+    
+        <div class="mySlides">
+            <div id = translate-element><q id="text1"></q></div>
+            <p id="author1" class="author"></p>
+        </div>
+    
+        <div class="mySlides">
+            <div id = translate-element><q id="text2"></q></div>
+            <p id="author2" class="author"></p>
+        </div>
+    
+        <div class="mySlides">
+            <div id = translate-element><q id="text3"></q></div>
+            <p id="author3" class="author"></p>
+        </div>
+    
+        <div class="mySlides">
+            <div id = translate-element><q id="text4"></q></div>
+            <p id="author4" class="author"></p>
+        </div>
+    
+        <!-- Next/prev buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    
+    <!-- Dots/bullets/indicators -->
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <hr>
     <section id="footer">
         <div class="four-column-div">
             <div class="row">
-                <a href="index.html">Home</a>
+                <a id = translate-element href="index.html">Home</a>
             </div>
             <div class="row">
-                <a href="about.html">About Me</a>
+                <a id = translate-element href="about.html">About Me</a>
             </div>
             <div class="row">
-                <a href="https://www.github.com/CarloLj" target="_blank">GitHub</a>
+                <a id = translate-element href="https://www.github.com/CarloLj" target="_blank">GitHub</a>
             </div>
             <div class="row">
-                <a href="contact.html">Contact</a>
+                <a id = translate-element href="contact.html">Contact</a>
             </div>
         </div>
         <div class="one-column-centered">
@@ -181,8 +224,19 @@
         </div>
         <hr>
         <div class="one-column-centered">
-            <a>© Google SPS Week 1 -- Carlo Lujan -- 2021</a>
+            <a>© Google SPS Week 3 -- Carlo Lujan -- 2021</a>
         </div>
+        <select id="language">
+            <option value="en">English</option>
+            <option value="zh">Chinese</option>
+            <option value="es">Spanish</option>
+            <option value="hi">Hindi</option>
+            <option value="ar">Arabic</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="ja">Japanese</option>
+        </select>
+        <button onclick="requestTranslation1();">Translate!</button>
     </section>
 </body>
 <script
@@ -191,4 +245,5 @@
     crossorigin="anonymous">
 </script>
 <script src="script.js"></script>
+<script src="commoncomponents.js"></script>
 </html>
