@@ -59,7 +59,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-function requestTranslation1(){
+async function requestTranslation1(){
     const texts = document.querySelectorAll('[id=translate-element]')
     const languageCode = document.getElementById('language').value;
     const originaltexts = [];
@@ -69,7 +69,7 @@ function requestTranslation1(){
         element.innerText="Translating...";
     })
     
-    /*
+  
     const requestPromiseArray = originaltexts.map(element => {
         const params = new URLSearchParams();
         params.append('text', element);
@@ -77,23 +77,14 @@ function requestTranslation1(){
         return fetch('/translate', {
             method: 'POST',
             body: params
-        })
+        }).then(response => response.text())
     })
 
-    const response = Promise.all(requestPromiseArray);
+    const response = await Promise.all(requestPromiseArray);
 
-    originaltexts.forEach((element, i) => {
-        console.log(response[i].text);
-        element.text = response[i].text;
-    })
-    */
-    var i = 0;
-    originaltexts.forEach(element=>{
-        const params = new URLSearchParams();
-        params.append('text', element);
-        params.append('languageCode', languageCode);
-        texts[i].innerText = getTranslatedMessage(params)
-        i++;
+    texts.forEach((element, i) => {
+        console.log(response[i]);
+        element.innerText = response[i];
     })
 }
 
