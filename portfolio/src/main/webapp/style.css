@@ -537,3 +537,33 @@ q {font-style: italic;}
 
 /* Add a blue color to the author */
 .author {color: cornflowerblue;}
+
+.bef:before{
+    content: '';
+    animation: animate infinite 20s;
+}
+@keyframes animate{
+    0%{
+        content: 'Traducir';
+    }
+    60%{
+        content: 'Translate';
+    }
+    70%{
+        content: 'Übersetzen';
+    }
+    80%{
+        content: '翻译';
+    }
+    90%{
+        content: '翻訳する';
+    }
+    100%{
+        content: 'अनुवाद करना';
+    }
+}
+
+.projecttextstyle{
+    font-weight: normal; 
+    text-align: justify;
+}
