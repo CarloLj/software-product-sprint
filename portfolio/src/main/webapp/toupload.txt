@@ -1,0 +1,49 @@
+Image Name <input id="namebox" type="text"> <br><br>
+            <img id = "myimg"> <label id="upProgress"></label> 
+
+            <button id="select">sELECT IMAGE</button>
+            <button id="upload">sELECT IMAGE</button>
+            <button id="retrieve">Retrieve IMAGE</button>
+
+
+
+//add to  whatilove-firebase to upload photos
+document.getElementById('select').onclick = function(e){
+    var input = document.createElement('input');
+    input.type= 'file';
+    input.click();
+
+    input.onchange = e =>{
+        files = e.target.files;
+        reader = new FileReader();
+        reader.onload = function(){
+            document.getElementById("myimg").src = reader.result;
+        }
+        reader.readAsDataURL(files[0]);
+    }
+}
+
+document.getElementById('upload').onclick = function(){
+    ImgName= document.getElementById('namebox').value;
+    var uploadTask = firebase.storage().ref('Images/'+ImgName+".png").put(files[0]);
+
+    uploadTask.on('state_changed', function(snapshot){
+        var progress = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
+        document.getElementById('upProgress').innerHTML = 'Upload'+progress+'%';
+    },
+    
+    function(error){
+        alert('error while saving the image');
+    },
+
+    function(){
+        uploadTask.snapshot.ref.getDownloadURL().then(function(url){
+            ImgUrl = url;
+            firebase.database().ref('Pictures/'+ImgName).set({
+                Name: ImgName,
+                Link:ImgUrl
+            });
+        alert('image added succesfully');
+        });
+    });
+}

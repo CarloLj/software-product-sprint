@@ -1,5 +1,16 @@
-/* JS FOR THE SERVLETS PART */
+/* JS FOR THE SERVLETS PART UPDATE: USING FIREBASE */
 async function viewmore(){
+    var rootRef = firebase.database().ref();
+    var urlRef = rootRef.child("Pagecounter");
+    urlRef.once("value", function(snapshot) {
+        snapshot.forEach(function(child) {
+            var texto = document.getElementById('pagecounter-text');
+            var result = child.val();
+            const n = "This page has been viewed: ";
+            texto.innerHTML = n +" "+result+" times";
+        })
+    });
+    /*
     const responseFromServer = await fetch('/counter-date');
     const stats = await responseFromServer.text();
     const counterContainer = document.getElementById('pagecounter-text');
@@ -8,10 +19,16 @@ async function viewmore(){
     }
     var y = document.createTextNode(stats);
     counterContainer.appendChild(y);
+    */
 }
 
 function addViewLoad(){
-    fetch('/add-view'); //Uses servlets to update the page view number "onload" of the page
+    firebase.database()
+    .ref()
+    .child('Pagecounter')
+    .child('views')
+    .set(firebase.database.ServerValue.increment(1))
+    //fetch('/add-view'); //Uses servlets to update the page view number "onload" of the page
 }
 
 /* JS FOR THE QUOTE CARROUSEL */
