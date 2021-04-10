@@ -5,9 +5,13 @@
     <title>Carlo's portfolio - Gallery</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+    <script src="onload.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
-    <body onload="addQuotesOnLoad()">
+    <body onload="addQuotesOnLoad(), LoadAllImages()">
         <div class="container">
             <div class="nav-wrapper">
                 <div class="left-side">
@@ -33,24 +37,13 @@
                     </div>
                 </div>
             </div>
-            <h1>THIS IS A WORK IN PROGRESS... COMING SOON</h1>
-            <div id="translate-element">Hi my name is carlo</div>
-            <div id="translate-element">I like hamburguers</div>
-            <div id="translate-element">I like to drive cars</div>
-            <div id="translate-element">I like minecraft</div>
-            <div id="translate-element">Welcome to las Vegas</div>
-            <button onclick="requestTranslation1();">Translate</button>
-                <textarea id="text"></textarea>
-                <select id="language">
-                <option value="es">English</option>
-                <option value="zh">Chinese</option>
-                <option value="es">Spanish</option>
-                <option value="hi">Hindi</option>
-                <option value="ar">Arabic</option>
-                </select>
-                <button onclick="requestTranslation();">Translate</button>
-                <hr/>
-                <div id="result"></div>
+            <div class="container">
+                <div class="content-wrapper">
+                    <div id = "imagescontainer" class="portfolio-items-wrapper">
+                        
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="slideshow-container">
             <!-- Full-width slides/quotes -->
@@ -92,7 +85,6 @@
             <span class="dot" onclick="currentSlide(4)"></span>
             <span class="dot" onclick="currentSlide(5)"></span>
         </div>
-        <hr>
         <section id="footer">
             <div class="four-column-div">
                 <div class="row">
@@ -117,5 +109,12 @@
             </div>
         </section>
     </body>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+    </script>
     <script src="commoncomponents.js"></script>
+    <script src="firebase.js"></script>
+    <script src="whatilove-firebase.js"></script>
 </html>

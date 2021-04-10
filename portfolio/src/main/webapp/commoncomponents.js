@@ -1,5 +1,16 @@
-/* JS FOR THE SERVLETS PART */
-async function viewmore(){
+/* JS FOR THE SERVLETS PART UPDATE: USING FIREBASE */
+function viewmore(){
+    var rootRef = firebase.database().ref();
+    var urlRef = rootRef.child("Pagecounter");
+    urlRef.once("value", function(snapshot) {
+        snapshot.forEach(function(child) {
+            var texto = document.getElementById('pagecounter-text');
+            var result = child.val();
+            const n = "This page has been viewed: ";
+            texto.innerHTML = n +" "+result+" times";
+        })
+    });
+    /*
     const responseFromServer = await fetch('/counter-date');
     const stats = await responseFromServer.text();
     const counterContainer = document.getElementById('pagecounter-text');
@@ -8,30 +19,10 @@ async function viewmore(){
     }
     var y = document.createTextNode(stats);
     counterContainer.appendChild(y);
-}
-
-function addViewLoad(){
-    fetch('/add-view'); //Uses servlets to update the page view number "onload" of the page
+    */
 }
 
 /* JS FOR THE QUOTE CARROUSEL */
-function addQuotesOnLoad(){
-    const quotescontainer = document.getElementById('quotescontainer');
-    fetch("https://type.fit/api/quotes") //Fetches an array of a quote API
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(data) {
-        for (var i = 0; i < 5; i++) { //Searches for 5 random quotes 
-            const randomval = Math.floor(Math.random() * data.length);
-            const textcontainer = document.getElementById('text'+i);
-            const authorcontainer = document.getElementById('author'+i);
-            textcontainer.innerHTML = data[randomval].text;
-            authorcontainer.innerHTML = "-"+data[randomval].author;
-        }
-    });
-}
-
 var slideIndex = 1;
 showSlides(slideIndex);
 

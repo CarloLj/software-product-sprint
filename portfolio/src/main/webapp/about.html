@@ -5,6 +5,7 @@
     <title>Carlo's portfolio - About Me</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="onload.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
     <body onload="addQuotesOnLoad()">
@@ -71,6 +72,7 @@
                         -Spanish (Native)<br><br>
                         -English (Advanced)<br><br>
                     </p>
+                    <a id="translate-element" class="button button1" href="downloadables/carlo_resume.pdf" download="carlolujan_resume.pdf"><h3 id = translate-element>Download my resume</h3></a><br><br>
                     </div>
                 </div>
             </div>
@@ -115,7 +117,6 @@
             <span class="dot" onclick="currentSlide(4)"></span>
             <span class="dot" onclick="currentSlide(5)"></span>
         </div>
-        <hr>
         <section id="footer">
             <div class="four-column-div">
                 <div class="row">
@@ -149,7 +150,9 @@
             <option value="de">German</option>
             <option value="ja">Japanese</option>
         </select>
-        <button onclick="requestTranslation1();">Translate!</button>
+        <div class="bigsocialmediacentered">
+            <button class="button button1 bef" onclick="requestTranslation1();"></button>
+        </div>
     </body>
 <!--
     <h2>About Me coming soon..</h2>
